@@ -137,7 +137,6 @@ lookupec(char *dev)
 	for (p = dev; p != NULL; p = np, i++) {
 		if ((np = strchr(p, '.')) != NULL)
 			*np++ = '\0';
-
 		ec->ec_scnam[i] = KERN_INTRCNT_NUM;
 		siz = sizeof(n);
 		if (sysctl(ec->ec_scnam, i + 1, &n, &siz, NULL, 0) ==
