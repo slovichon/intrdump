@@ -1,0 +1,39 @@
+.\" $Id$
+.Dd August 21, 2004
+.Dt INTRDUMP 1
+.Os
+.Sh NAME
+.Nm intrdump
+.Nd print a dump of device interrupts
+.Sh SYNOPSIS
+.Nm intrdump
+.Op Fl d
+.Op Ar device ...
+.Sh DESCRIPTION
+The
+.Nm
+utility is used to display the list of hardware devices that support the
+.Xr evcount 9
+framework connected to the system and their interrupt count at a
+particular time.
+.Pp
+The
+.Nm
+utility supports the following options:
+.Bl -tag -width indent
+.It Fl d
+Do not descend recursively into devices attached to the target device.
+.El
+.Sh EXAMPLES
+The following is sample
+.Nm
+output.
+.Bd -literal
+$ intrdump
+.Ed
+.Sh SEE ALSO
+.Xr systat 1 ,
+.Xr sysctl 3 ,
+.Xr intro 4 ,
+.Xr autoconf 9 ,
+.Xr evcount 9
